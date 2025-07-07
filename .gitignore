@@ -233,12 +233,3 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-
-# Win 10 Data loss prevention file
-*.jfm
-QoF.Auditing/.vscode/launch.json
-QoF.Auditing/.vscode/settings.json
-QoF.Auditing/.vscode/tasks.json
-
-# Sonar Lint
-QoF.Auditing/.sonarlint/
