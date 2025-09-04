@@ -1,0 +1,6 @@
+@resume_filter_service_HostAddress = http://localhost:5189
+
+GET {{resume_filter_service_HostAddress}}/api/Resume/
+Accept: application/json
+
+###

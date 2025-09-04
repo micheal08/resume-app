@@ -1,0 +1,28 @@
+<h2>Resume Matcher</h2>
+<button (click)="login()">Login</button>
+<form (ngSubmit)="onSubmit()">
+  <label>Upload Resumes:</label>
+  <input type="file" (change)="onResumeFilesSelected($event)" multiple><br><br>
+
+  <label>Upload Job Description:</label>
+  <input type="file" (change)="onJobDescriptionSelected($event)"><br><br>
+
+  <button type="submit" [disabled]="loading">Submit</button>
+</form>
+
+<div *ngIf="loading">Processing...</div>
+
+<table *ngIf="results.length > 0">
+  <thead>
+    <tr>
+      <th>File Name</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of results">
+      <td>{{ result.name }}</td>
+      <td>{{ result.score }}</td>
+    </tr>
+  </tbody>
+</table>
